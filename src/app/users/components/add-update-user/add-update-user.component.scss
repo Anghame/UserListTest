@@ -1,0 +1,29 @@
+.card {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  input {
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  button:hover {
+    background-color: #28a745;
+  }
+  
+  small {
+    font-size: 0.875rem;
+    color: #f44336;
+  }
+  

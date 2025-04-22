@@ -1,0 +1,31 @@
+<div class="card p-4 max-w-md mx-auto shadow-lg">
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      
+      <div class="mb-4">
+        <label for="name" class="block mb-2 text-lg font-semibold">Name</label>
+        <input pInputText id="name" formControlName="name" class="w-full border-2 p-2 rounded-lg" placeholder="Enter name"   class="ng-invalid ng-dirty" />
+        <small *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-red-500 text-sm">Name is required</small>
+      </div>
+  
+      <div class="mb-4">
+        <label for="email" class="block mb-2 text-lg font-semibold">Email</label>
+        <input pInputText id="email" formControlName="email" class="w-full border-2 p-2 rounded-lg" placeholder="Enter email"   class="ng-invalid ng-dirty" />
+        <small *ngIf="userForm.get('email')?.errors?.['required'] && userForm.get('email')?.touched" class="text-red-500 text-sm">Email is required</small>
+        <small *ngIf="userForm.get('email')?.errors?.['email'] && userForm.get('email')?.touched" class="text-red-500 text-sm">Invalid email format</small>
+      </div>
+  
+    
+      <div class="mb-4">
+        <label for="phone" class="block mb-2 text-lg font-semibold">Phone</label>
+        <input pInputText id="phone" formControlName="phone" class="w-full border-2 p-2 rounded-lg" placeholder="Enter phone number"   class="ng-invalid ng-dirty"/>
+        <small *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched" class="text-red-500 text-sm">Phone is required</small>
+      </div>
+  
+     
+      <button type="submit" pButton label="Add" class="w-full p-button-success mt-4 rounded-lg"></button>
+    </form>
+<!--   
+    <p-toast></p-toast> -->
+  </div>
+  
